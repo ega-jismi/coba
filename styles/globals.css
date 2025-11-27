@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default Transisi Halus untuk Semua Elemen */
+* {
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+/* Light Mode Default */
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+/* Dark Mode Global Styles */
+.dark body {
+  @apply bg-slate-900 text-slate-100;
+}
+
+/* Utility Class Container */
+.container { 
+  max-width: 1100px; 
+  margin-left: auto; 
+  margin-right: auto; 
+  padding-left: 1rem; 
+  padding-right: 1rem; 
+}
+
+/* Custom Scrollbar (Opsional - agar scrollbar juga gelap) */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0f172a; 
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155; 
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569; 
+}
